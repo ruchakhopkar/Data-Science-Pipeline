@@ -308,7 +308,7 @@ class models:
         
         #make sure the distribution of train and test are right
         X_test_sample = X_test.sample(n = int(0.8*len(df_class)) - len(X_train), random_state = 42)
-        # X_test = X_test[~X_test.index.isin(X_test_sample.index)] #all the rows added in the training set need to be deleted from the testing set
+        X_test = X_test[~X_test.index.isin(X_test_sample.index)] #all the rows added in the training set need to be deleted from the testing set
         X_train = pd.concat([X_train, X_test_sample])
         
         return X_train, X_test       
