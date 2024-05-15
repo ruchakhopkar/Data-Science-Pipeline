@@ -108,4 +108,4 @@ for sub_group in all_solas_sub_group:
     #get metrics for individual trees
     model_df_group.get_metrics()
     
-    break
+    
